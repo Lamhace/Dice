@@ -1,0 +1,212 @@
+
+
+button{
+transition: transform 0.3s ease;
+}
+button:hover {
+    transform: scale(1.1, 1.1);
+}
+
+@media (min-width: 350px){
+    .gridContainer {
+            width: 350px;
+        }
+    
+        .container1,
+        .container2 {
+            padding-top: 70px;
+            gap: 6px;
+            padding-bottom: 165px;
+        }
+    
+        .playerText {
+            font-size: 1.3rem;
+        }
+    
+        .score {
+            font-size: 3rem;
+        }
+    
+        .activePlayer1 {
+            top: 78px;
+            left: 130px;
+        }
+    
+        .activePlayer2 {
+            top: 78px;
+            right: 28px;
+        }
+    
+        img {
+            height: 2.3rem;
+            top: 130px;
+            left: 156px;
+        }
+    
+        .rollDice {
+            font-size: 1.8rem;
+            bottom: 10px;
+            left: 160px;
+        }
+    
+        .reset {
+            font-size: 0.8rem;
+            gap: 7px;
+            top: 10px;
+            left: 142px;
+            padding: 4px 8px;
+        }
+}
+@media (min-width: 640px) {
+.gridContainer {
+        width: 600px;
+    }
+
+    .container1,
+    .container2 {
+        padding-top: 50px;
+        gap: 6px;
+        padding-bottom: 150px;
+    }
+
+    .playerText {
+        font-size: 1.7rem;
+    }
+
+    .score {
+        font-size: 3.5rem;
+    }
+
+    .activePlayer1 {
+        top: 63px;
+        left: 210px;
+    }
+
+    .activePlayer2 {
+        top: 63px;
+        right: 72px;
+    }
+
+    img {
+        height: 2.7rem;
+        top: 135px;
+        left: 278px;
+    }
+
+    .rollDice {
+        font-size: 2rem;
+        bottom: 20px;
+        left: 283px;
+    }
+
+    .reset {
+        font-size: 0.8rem;
+        gap: 7px;
+        top: 10px;
+        left: 268px;
+        padding: 4px 8px;
+    }
+}
+@media (min-width: 768px) {
+.gridContainer {
+        width: 700px;
+    }
+
+    .container1,
+    .container2 {
+        padding-top: 50px;
+        gap: 6px;
+        padding-bottom: 150px;
+    }
+
+    .playerText {
+        font-size: 2rem;
+    }
+
+    .score {
+        font-size: 4rem;
+    }
+
+    .activePlayer1 {
+        top: 68px;
+        left: 245px;
+    }
+
+    .activePlayer2 {
+        top: 68px;
+        right: 86px;
+    }
+
+    img {
+        height: 3rem;
+        top: 140px;
+        left: 325px;
+    }
+
+    .rollDice {
+        font-size: 2.3rem;
+        bottom: 30px;
+        left: 332px;
+    }
+
+    .reset {
+        font-size: 1.2rem;
+        gap: 10px;
+        top: 10px;
+        left: 310px;
+        padding: 4px 8px;
+    }
+}
+@media (min-width: 1024px) {
+.gridContainer {
+        width: 1000px;
+    }
+
+    .container1,
+    .container2 {
+        padding-top: 70px;
+        gap: 20px;
+        padding-bottom: 250px;
+    }
+
+    .playerText {
+        font-size: 2.5rem;
+    }
+
+    .score {
+        font-size: 5rem;
+    }
+
+    .activePlayer1 {
+        top: 94px;
+        left: 340px;
+    }
+
+    .activePlayer2 {
+        top: 94px;
+        right: 140px;
+    }
+
+    img {
+        height: 4rem;
+        top: 200px;
+        left: 468px;
+    }
+
+    .rollDice {
+        font-size: 3rem;
+        bottom: 60px;
+        left: 475px;
+    }
+
+    .reset {
+        font-size: 1.5rem;
+        gap: 10px;
+        top: 18px;
+        left: 450px;
+        padding: 7px 12px;
+    }
+}
+@media (min-width: 1280px) {
+  
+}
