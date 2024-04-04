@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { MdFlipCameraAndroid } from "react-icons/md";
 import { GrPowerReset } from "react-icons/gr";
 import { GoDotFill } from "react-icons/go";
@@ -15,6 +15,7 @@ import dice6 from "../images/dice6.png";
 const Dice = () => {
   const dispatch = useDispatch();
   const [diceValue, setDiceValue] = useState(1);
+  const [dropDice, setDropDice] = useState(false);
 
   const { playerScores, player1Active, player2Active } = useSelector(
     (store) => store.Dice
@@ -24,12 +25,12 @@ const Dice = () => {
     const DiceValue = Math.floor(Math.random() * 6 + 1);
     dispatch(rollDice(DiceValue));
     setDiceValue(DiceValue);
-    // if (playerScores[0] === 100) {
-    //   setWinStatementPlayer1("WINS!");
-    // } else if (playerScores[1] === 100) {
-    //   setWinStatementPlayer2("WINS!");
-    // }
+    setDropDice(false)
   };
+  useEffect(() => {
+    setDropDice(true);
+  }, [dropDice]);
+
   let diceImage;
   switch (diceValue) {
     case 1:
@@ -83,7 +84,11 @@ const Dice = () => {
         </div>
       </div>
 
-      <img src={diceImage} alt="diceImage" className="absolute" />
+      <img
+        src={diceImage}
+        alt="diceImage"
+        className={`diceImage absolute ${dropDice && "diceImageAnimation"}`}
+      />
 
       <button className=" absolute rollDice" onClick={rollTheDice}>
         <MdFlipCameraAndroid className="  text-pink-400" />
@@ -94,11 +99,6 @@ const Dice = () => {
       >
         <GrPowerReset className="" /> <span>RESET</span>
       </button>
-      {/* -----------S--T-O--P------------------ */}
-      {/* <div>PLAYER 1 SCORE: {playerScores[0]}</div>
-      <button onClick={rollTheDice}>START GAME</button>
-      <h1>DICE VALUE - {diceValue} </h1>
-      <div>PLAYER 2 SCORE: {playerScores[1]}</div> */}
     </div>
   );
 };
