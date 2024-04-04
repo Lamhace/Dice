@@ -5,12 +5,13 @@ import { GoDotFill } from "react-icons/go";
 import "./Dice.css";
 import { useDispatch, useSelector } from "react-redux";
 import { rollDice, resetGame } from "../Redux/DiceSlice";
-import dice1 from "../images/dice1.png";
-import dice2 from "../images/dice2.png";
-import dice3 from "../images/dice3.png";
-import dice4 from "../images/dice4.png";
-import dice5 from "../images/dice5.png";
-import dice6 from "../images/dice6.png";
+import dice1 from "../media/images/dice1.png";
+import dice2 from "../media/images/dice2.png";
+import dice3 from "../media/images/dice3.png";
+import dice4 from "../media/images/dice4.png";
+import dice5 from "../media/images/dice5.png";
+import dice6 from "../media/images/dice6.png";
+import audioSound from '../media/audio/dice-142528.mp3'
 
 const Dice = () => {
   const dispatch = useDispatch();
@@ -26,6 +27,10 @@ const Dice = () => {
     dispatch(rollDice(DiceValue));
     setDiceValue(DiceValue);
     setDropDice(false)
+    if(dropDice){
+      const audio = new Audio(audioSound)
+      audio.play()
+    }
   };
   useEffect(() => {
     setDropDice(true);
