@@ -66,6 +66,7 @@ const Dice = () => {
 
   return (
     <div className="relative gridContainer grid grid-cols-2">
+    
       <div className="container1 bg-slate-100 flex justify-center items-center flex-col">
         <h1 className="playerText">PLAYER 1</h1>
         {player1Active && (

@@ -224,15 +224,9 @@ button:hover {
   }
 
   70% {
-    transform: translateX(-60px) scale(2) rotate(260deg);
-  }
-  80% {
-    transform: translateY(-10px) scale(2);
+    transform:  scale(2);
   }
 
-  90% {
-    transform: translateX(-20px) translateY(-5px) scale(2);
-  }
 
   100% {
     transform: translateX(0px) translateY(0px) scale(1);
@@ -240,5 +234,5 @@ button:hover {
 }
 .diceImageAnimation {
   animation-name: diceDrop;
-  animation-duration: 2s;
+  animation-duration: 1.8s;
 }
