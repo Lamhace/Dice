@@ -66,7 +66,6 @@ const Dice = () => {
 
   return (
     <div className="relative gridContainer grid grid-cols-2">
-    
       <div className="container1 bg-slate-100 flex justify-center items-center flex-col">
         <h1 className="playerText">PLAYER 1</h1>
         {player1Active && (
@@ -74,8 +73,12 @@ const Dice = () => {
             <GoDotFill className=" text-green-600" />
           </div>
         )}
-        <div className="score">
-          {playerScores[0] === 100 ? "WINS" : playerScores[0]}
+        <div className="score  ">
+          {playerScores[0] === 100 ? (
+            <span className="text-green-500">WINS</span>
+          ) : (
+            playerScores[0]
+          )}
         </div>
       </div>
       <div className="container2 bg-red-50 flex justify-center items-center flex-col">
@@ -86,7 +89,11 @@ const Dice = () => {
           </div>
         )}
         <div className="score">
-          {playerScores[1] === 100 ? "WINS" : playerScores[1]}
+          {playerScores[1] === 100 ? (
+            <span className="text-green-500">WINS</span>
+          ) : (
+            playerScores[1]
+          )}
         </div>
       </div>
 
